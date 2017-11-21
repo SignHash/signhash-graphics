@@ -9,14 +9,15 @@ PREVIEWDPI=90
 DARKBG=\#4d4d4d
 LIGHTBG=\#eeeeee
 
-RENDER:=$(INKSCAPE) --without-gui --export-dpi=$(RENDERDPI)
+RENDER:=$(INKSCAPE) --without-gui --export-dpi=$(RENDERDPI) --export-area-drawing
 LIGHTPREVIEW:=$(INKSCAPE) --without-gui --export-dpi=$(PREVIEWDPI) --export-background="$(LIGHTBG)"
 DARKPREVIEW:=$(INKSCAPE) --without-gui --export-dpi=$(PREVIEWDPI) --export-background="$(DARKBG)"
 
 PREVIEWS=\
 		 logotype/signhash-logotype-inverse-dark-preview.png \
 		 logotype/signhash-logotype-light-preview.png \
-		 logomark/signhash-logomark-light-preview.png
+		 logomark/signhash-logomark-light-preview.png \
+		 logomark/signhash-logomark-inverse-dark-preview.png
 
 .PHONY: default previews light-previews dark-previews clean
 
